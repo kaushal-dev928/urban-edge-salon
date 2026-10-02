@@ -1,0 +1,269 @@
+.navbar {
+  width: 100%;
+
+  background: var(--dark);
+
+  color: white;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 1000;
+}
+
+.navbar-container {
+  width: 100%;
+
+  max-width: var(--max-width);
+
+  min-height: 80px;
+
+  margin: 0 auto;
+
+  padding: 0 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+/* Logo */
+
+.logo {
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 24px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+/* Desktop Navigation */
+
+.nav-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 30px;
+}
+
+.nav-links a {
+  position: relative;
+
+  color: var(--white);
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.nav-links a.active {
+  color: var(--primary);
+}
+
+/* Underline animation */
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -8px;
+
+  width: 0;
+  height: 2px;
+
+  background: var(--primary);
+
+  transition: var(--transition);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Booking Button */
+
+.booking-btn {
+  display: inline-block;
+
+  padding: 12px 20px;
+
+  background: #c89b3c;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  border-radius: 3px;
+
+  transition: all 0.3s ease;
+}
+
+.booking-btn:hover {
+  background: #a87d27;
+
+  transform: translateY(-2px);
+}
+
+/* Mobile Menu Button */
+
+.menu-btn {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 8px;
+
+  background: transparent;
+
+  border: 1px solid #333;
+
+  cursor: pointer;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5px;
+}
+
+.menu-btn span {
+  display: block;
+
+  width: 22px;
+  height: 2px;
+
+  background: white;
+
+  transition: all 0.3s ease;
+}
+
+/* Hamburger → X */
+
+.menu-btn.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile Menu */
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu a.active {
+  color: var(--primary);
+}
+
+/* Tablet / Mobile */
+
+@media (max-width: 900px) {
+
+  .nav-links,
+  .desktop-booking {
+    display: none;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0;
+
+    background: var(--dark);
+
+    border-top: 1px solid #2b2b2b;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: max-height 0.35s ease;
+  }
+
+  .mobile-menu-open {
+    max-height: 500px;
+  }
+
+  .mobile-menu > a {
+    padding: 16px 20px;
+
+    color: #dddddd;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #222222;
+
+    font-size: 15px;
+  }
+
+  .mobile-menu > a:hover {
+    color: var(--primary);
+
+    background: #181818;
+  }
+
+  .mobile-booking-btn {
+    margin: 15px 20px;
+
+    text-align: center;
+
+    background: #c89b3c !important;
+
+    color: white !important;
+
+    border: none !important;
+  }
+}
+
+/* Small Mobile */
+
+@media (max-width: 500px) {
+
+  .navbar-container {
+    min-height: 70px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+}

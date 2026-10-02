@@ -1,0 +1,168 @@
+.admin-login {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px 20px;
+
+  background: #111;
+}
+
+.admin-login-card {
+  width: 100%;
+  max-width: 430px;
+
+  padding: 45px 40px;
+
+  background: #fff;
+}
+
+/* Header */
+
+.admin-login-header {
+  margin-bottom: 30px;
+
+  text-align: center;
+}
+
+.admin-login-header p {
+  margin-bottom: 10px;
+
+  color: #c89b3c;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.admin-login-header h1 {
+  margin-bottom: 8px;
+
+  color: #111;
+
+  font-size: 32px;
+}
+
+.admin-login-header span {
+  color: #777;
+
+  font-size: 14px;
+}
+
+/* Error */
+
+.admin-login-error {
+  margin-bottom: 20px;
+
+  padding: 13px 15px;
+
+  background: #fdeaea;
+
+  border: 1px solid #f5b5b5;
+
+  color: #b42318;
+
+  font-size: 13px;
+}
+
+/* Form */
+
+.admin-login-form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.admin-form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.admin-form-group label {
+  color: #333;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.admin-form-group input {
+  width: 100%;
+
+  padding: 14px;
+
+  border: 1px solid #ddd;
+
+  outline: none;
+
+  font-size: 14px;
+}
+
+.admin-form-group input:focus {
+  border-color: #c89b3c;
+}
+
+/* Login Button */
+
+.admin-login-btn {
+  width: 100%;
+
+  margin-top: 5px;
+
+  padding: 14px;
+
+  border: none;
+
+  background: #111;
+
+  color: #fff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.admin-login-btn:hover {
+  background: #c89b3c;
+  color: #111;
+}
+
+/* Back */
+
+.back-website-link {
+  display: block;
+
+  margin-top: 25px;
+
+  color: #777;
+
+  font-size: 13px;
+
+  text-align: center;
+
+  text-decoration: none;
+}
+
+.back-website-link:hover {
+  color: #c89b3c;
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+  .admin-login-card {
+    padding: 35px 25px;
+  }
+
+  .admin-login-header h1 {
+    font-size: 28px;
+  }
+}
